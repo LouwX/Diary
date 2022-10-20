@@ -7,7 +7,13 @@ class Application(tk.Frame):
         self.pack()
         self.create_widgets()
 
+
     def create_widgets(self):
+        ###########################################################
+        # WINDOWS RESIZE
+        ###########################################################
+        root.geometry("750x375")
+        root.eval('tk::PlaceWindow . center')
         ###########################################################
         # BUTTON SAY HELLO
         ###########################################################
@@ -27,5 +33,6 @@ class Application(tk.Frame):
         print("hi there, everyone!")
 
 root = tk.Tk()
+
 app = Application(master=root)
 app.mainloop()
